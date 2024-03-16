@@ -1,0 +1,7 @@
+DROP TABLE LOOMBANDSELLER IF EXISTS;
+CREATE TABLE LOOMBANDSELLER(sellerid int PRIMARY KEY, sellerName varchar(255) NOT NULL, UNIQUE(sellerName));
+DROP TABLE LOOMBANDS IF EXISTS;
+CREATE TABLE LOOMBANDS(loomId int PRIMARY KEY, loomName varchar(255) NOT NULL, loomPrice real CHECK (loomPrice >= 0.0), loomSellerName varchar(255) NOT NULL);
+
+
+
